@@ -99,7 +99,10 @@ Replacing odd $\ell$ by $d$ we get
         \equiv n^{2m+1} \\
         &\sum_{r} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
         + 2 \sum_{r} \coeffA{m}{r} \left[ \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
-        - n^{2m+1} = 0.
+        - n^{2m+1} = 0 \\
+        &\sum_{r=0}^{m} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
+        + 2 \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{d=0}^{(r-1)/2} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
+        - n^{2m+1} = 0 \\
     \end{split}\label{eq:equation7}
 \end{equation}
 Taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7}, we get
