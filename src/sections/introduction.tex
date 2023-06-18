@@ -80,6 +80,23 @@ Using the definition of $\coeffA{m}{r}$, we obtain the following identity for po
     + 2 \sum_{r} \coeffA{m}{r} \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
     \equiv n^{2m+1}
 \end{equation}
+Replacing $\ell$ we get
+\begin{equation*}
+    \begin{split}
+        &\sum_{r} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+        + 2 \sum_{r} \coeffA{m}{r} \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1}
+        \equiv n^{2m+1} \\
+        &\sum_{r} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
+        + 2 \sum_{r} \coeffA{m}{r} \left[ \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
+        - n^{2m+1} = 0.
+    \end{split}
+\end{equation*}
+%Consider the case $r=m$
+%\begin{equation*}
+%    \coeffA{m}{m} \left[ \frac{1}{(2m+1) \binom{2m}{m}} n^{2r+1} \right]
+%    + 2 \coeffA{m}{m} \left[ \sum_{d} \frac{(-1)^m}{2m-2d} \binom{m}{2d+1} \bernoulli{2m-2d} n^{2d+1} \right]
+%    - n^{2m+1} = 0.
+%\end{equation*}
 %\begin{equation}
 %    \label{eq:proof1}
 %    \begin{split}
