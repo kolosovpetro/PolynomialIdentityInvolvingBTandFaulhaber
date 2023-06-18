@@ -16,13 +16,13 @@ Consider the Faulhaber's formula
 \end{equation*}
 it is very important to note that summation bound is $p$ while binomial coefficient upper bound is $p+1$.
 It means that we cannot skip summation bounds unless we do some trick as
-\begin{equation*}
+\begin{equation}
     \begin{split}
         \sum_{k=1}^{n} k^{p} &= \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j} \\
         &= \left[ \frac{1}{p+1}\sum_{j=0}^{p+1} \binom{p+1}{j} \bernoulli{j} n^{p+1-j} \right] - \bernoulli{p+1} \\
         &= \left[ \frac{1}{p+1}\sum_{j} \binom{p+1}{j} \bernoulli{j} n^{p+1-j} \right] - \bernoulli{p+1} \\
-    \end{split}
-\end{equation*}
+    \end{split}\label{eq:faulhaber-formula}
+\end{equation}
 Using Faulhaber's formula
 $\sum_{k=1}^{n} k^{p} = \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j}$
 we get
@@ -38,19 +38,19 @@ we get
     \end{split}
 \end{equation*}
 Now, we notice that
-\begin{equation*}
+\begin{equation}
     \sum_{t} \binom{r}{t} \frac{(-1)^t}{r+t+1} \binom{r+t+1}{j}
     =\begin{cases}
          \frac{1}{(2r+1) \binom{2r}r}, & \text{if } j=0;\\
          \frac{(-1)^r}{j} \binom{r}{2r-j+1}, & \text{if } j>0.
-    \end{cases}
-\end{equation*}
+    \end{cases}\label{eq:combinatorial-identity}
+\end{equation}
 In particular, the last sum is zero for $0< t \leq j$.
 So taking $j=0$ we have
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
-        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} + \left[ \sum_{j \geq 1} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j} \right] \\
+        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} + \left[ \sum_{j \geq 1} \bernoulli{j} n^{2r+1-j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j} \right] \\
         &- \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
     \end{split}
 \end{equation*}
@@ -58,10 +58,28 @@ Now let's simplify the double summation
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
-        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} + \left[ \sum_{t} \frac{(-1)^r}{j} \binom{r}{2r-j+1} \bernoulli{j} n^{2r+1-j} \right] \\
-        &- \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
+        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+        + \underbrace{\left[ \sum_{j \geq 1} \frac{(-1)^r}{j} \binom{r}{2r-j+1} \bernoulli{j} n^{2r+1-j} \right]}_{(\star)} \\
+        &- \underbrace{\left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]}_{(\diamond)}
     \end{split}
 \end{equation*}
+Hence, introducing $\ell=2r-j+1$ to $(\star)$ and $\ell=r-t$ to $(\diamond)$, we get
+\begin{equation}
+    \begin{split}
+        \sum_{k=1}^{n} k^{r} (n-k)^{r}
+        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+        + \left[ \sum_{\ell} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell} \right] \\
+        &- \left[ \sum_{\ell} \binom{r}{\ell} \frac{(-1)^{r-\ell}}{2r+1-\ell} \bernoulli{2r+1-\ell} n^{\ell} \right]\\
+        &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} + 2 \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
+    \end{split}\label{eq:polynomial-sum-1}
+\end{equation}
+Using the definition of $\coeffA{m}{r}$, we obtain the following identity for polynomials in $n$
+\begin{equation}
+    \label{eq:equation}
+    \sum_{r} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+    + 2 \sum_{r} \coeffA{m}{r} \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
+    \equiv n^{2m+1}
+\end{equation}
 %\begin{equation}
 %    \label{eq:proof1}
 %    \begin{split}
