@@ -58,17 +58,20 @@ Expanding previous we get
         &+ \cdots \\
     \end{split}\label{eq:equation15}
 \end{equation}
-Rearranging sum we get
+Rearranging sum we get for $m=4$
 \begin{equation}
     \begin{split}
         n^{2m+1}
         &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
         &= \coeffA{m}{0} n \\
-        &+ \coeffA{m}{1} n^{1} \sum_{k=1}^{n} k^{1} - \coeffA{m}{1} n^{0} \sum_{k=1}^{n} k^{2} \\
-        &+ \coeffA{m}{2} n^{2} \sum_{k=1}^{n} k^{2} - \coeffA{m}{2} 2 n^{1} \sum_{k=1}^{n} k^{3} + \coeffA{m}{2} n^{0} \sum_{k=1}^{n} k^{4} \\
-        &+ \coeffA{m}{3} n^{3} \sum_{k=1}^{n} k^{3} - \coeffA{m}{3} 3 n^{2} \sum_{k=1}^{n} k^{4} + \coeffA{m}{3} 3 n^{1} \sum_{k=1}^{n} k^{5} - \coeffA{m}{3} n^{0} \sum_{k=1}^{n} k^{6} \\
-        &+ \coeffA{m}{4} n^{4} \sum_{k=1}^{n} k^{4} - \coeffA{m}{4} 4 n^{3} \sum_{k=1}^{n} k^{5} + \coeffA{m}{4} 6 n^{2} \sum_{k=1}^{n} k^{6} - \coeffA{m}{4} 4 n^{1} \sum_{k=1}^{n} k^{7} + \coeffA{m}{4} n^{0} \sum_{k=1}^{n} k^{8} \\
-        &+ \cdots \\
+        &+ \sum_{k=1}^{n} k^{1} \coeffA{m}{1} n^{1} \\
+        &+ \sum_{k=1}^{n} k^{2} \left[ - \coeffA{m}{1} n^{0} + \coeffA{m}{2} n^{2} \right] \\
+        &+ \sum_{k=1}^{n} k^{3} \left[ - \coeffA{m}{2} 2n + \coeffA{m}{3} n^3 \right] \\
+        &+ \sum_{k=1}^{n} k^{4} \left[ \coeffA{m}{2} - \coeffA{m}{3} 3n^2 + \coeffA{m}{4} n^4 \right] \\
+        &+ \sum_{k=1}^{n} k^{5} \left[ \coeffA{m}{3} 3n - \coeffA{m}{4} 4n^3 \right] \\
+        &+ \sum_{k=1}^{n} k^{6} \left[ - \coeffA{m}{3} + \coeffA{m}{4} 6n^2 \right] \\
+        &+ \sum_{k=1}^{n} k^{7} \left[ - \coeffA{m}{4} 4n \right] \\
+        &+ \sum_{k=1}^{n} k^{8} \left[ - \coeffA{m}{4} \right]
     \end{split}\label{eq:equation16}
 \end{equation}
 Consider the Faulhaber's formula
