@@ -23,6 +23,8 @@ timeScaleDerivaitveOddPower::usage= "Returns the partial time scale derivative o
 
 theorem::usage= "Returns the partial dynamic equation identity such that is main result of the manuscript."
 
+faulhaberFormula::usage= "Power sum from 1 to N."
+
 Begin["`Private`"]
 
 Unprotect[Power];
@@ -50,7 +52,12 @@ timeScaleDerivaitveOddPower[m_, x_] := Expand[Limit[(sigma[x]^(2m + 1) - t^(2m +
 
 theorem[m_] := Expand[timeScaleDerivativeX[m, Global`x, sigma[Global`x]] + timeScaleDerivativeB[m, Global`x, Global`x]];
 
+faulhaberFormula[p_, n_] := 1 / (p+1) * Sum[Binomial[p+1, k] * BernoulliB[k] * n^(p-k+1), {k, 0, p}];
+
 End[ ]
 
 EndPackage[ ]
+
+
+
 
