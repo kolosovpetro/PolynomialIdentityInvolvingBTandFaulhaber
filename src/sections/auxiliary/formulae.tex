@@ -1,0 +1,108 @@
+In this section the MathOverflow answer \href{https://mathoverflow.net/a/297916}{\texttt{mathoverflow.net/a/297916}}
+is considered and analyzed precisely.
+This section is copy-paste of original MO answer with in-place clarifications of some parts where formulae derivation is
+not so obvious.
+Few part are not clear for me at all, so that I kept original text there.
+In general, this section is motivated to provide original answer and only after that there will be questions provided in
+ongoing sections.
+To clarify and simplify navigation over the document please find table of contents.
+All equations in this document are numbered (regardless if they are referenced or not), so that if you have some comment
+it is simpler to reference particular formula.
+So, let's begin.
+Consider the polynomial relation
+\begin{equation}
+    n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
+\end{equation}
+Expanding the $(n-k)^r$ part via Binomial theorem we get
+\begin{equation}
+    \begin{split}
+        n^{2m+1} &= \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r} \\
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} k^{t} \right] \\
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+    \end{split}\label{eq:equation2}
+\end{equation}
+Explicitly~\eqref{eq:equation2} is
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} \left[ \sum_{t=0}^{0} (-1)^t \binom{0}{t} n^{0-t} \sum_{k=1}^{n} k^{t+0} \right]
+        + \coeffA{m}{1} \left[ \sum_{t=0}^{1} (-1)^t \binom{1}{t} n^{1-t} \sum_{k=1}^{n} k^{t+1} \right] \\
+        &+ \coeffA{m}{2} \left[ \sum_{t=0}^{2} (-1)^t \binom{2}{t} n^{2-t} \sum_{k=1}^{n} k^{t+2} \right]
+        + \coeffA{m}{3} \left[ \sum_{t=0}^{3} (-1)^t \binom{3}{t} n^{3-t} \sum_{k=1}^{n} k^{t+3} \right] + \cdots \\
+    \end{split}\label{eq:equation13}
+\end{equation}
+Moreover,
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n \\
+        &+ \coeffA{m}{1} \left[ n^{1} \sum_{k=1}^{n} k^{1} - n^{0} \sum_{k=1}^{n} k^{2} \right] \\
+        &+ \coeffA{m}{2} \left[ n^{2} \sum_{k=1}^{n} k^{2} - 2 n^{1} \sum_{k=1}^{n} k^{3} + n^{0} \sum_{k=1}^{n} k^{4}\right] \\
+        &+ \coeffA{m}{3} \left[ n^{3} \sum_{k=1}^{n} k^{3} - 3 n^{2} \sum_{k=1}^{n} k^{4} + 3 n^{1} \sum_{k=1}^{n} k^{5} - n^{0} \sum_{k=1}^{n} k^{6} \right] \\
+        &+ \coeffA{m}{4} \left[ n^{4} \sum_{k=1}^{n} k^{4} - 4 n^{3} \sum_{k=1}^{n} k^{5} + 6 n^{2} \sum_{k=1}^{n} k^{6} - 4 n^{1} \sum_{k=1}^{n} k^{7} + n^{0} \sum_{k=1}^{n} k^{8} \right] + \cdots \\
+    \end{split}\label{eq:equation14}
+\end{equation}
+For arbitrary $m$ we have
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n
+        + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
+        + \coeffA{m}{2} \left[ \frac{1}{30} (-n + n^5) \right]
+        + \coeffA{m}{3} \left[ \frac{1}{420} (-10 n + 7 n^3 + 3 n^7) \right] \\
+        &+ \coeffA{m}{4} \left[ \frac{1}{630} (-21 n + 20 n^3 + n^9) \right]
+        + \coeffA{m}{5} \left[ \frac{1}{2772} (-210 n + 231 n^3 - 22 n^5 + n^{11}) \right] \\
+        &+ \coeffA{m}{6} \left[ \frac{1}{60060} (-15202 n + 18200 n^3 - 3003 n^5 + 5 n^{13}) \right] \\
+        &+ \coeffA{m}{7} \left[ \frac{1}{51480} (-60060 n + 76010 n^3 - 16380 n^5 + 429 n^7 + n^{15}) \right] \\
+        &+ \coeffA{m}{8} \left[ \frac{1}{218790} (-1551693 n + 2042040 n^3 - 516868 n^5 + 26520 n^7 + n^{17}) \right] + \cdots
+    \end{split}\label{eq:equation17}
+\end{equation}
+Expanding previous we get
+
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n \\
+        &+ \coeffA{m}{1} n^{1} \sum_{k=1}^{n} k^{1} - \coeffA{m}{1} n^{0} \sum_{k=1}^{n} k^{2} \\
+        &+ \coeffA{m}{2} n^{2} \sum_{k=1}^{n} k^{2} - \coeffA{m}{2} 2 n^{1} \sum_{k=1}^{n} k^{3} + \coeffA{m}{2} n^{0} \sum_{k=1}^{n} k^{4} \\
+        &+ \coeffA{m}{3} n^{3} \sum_{k=1}^{n} k^{3} - \coeffA{m}{3} 3 n^{2} \sum_{k=1}^{n} k^{4} + \coeffA{m}{3} 3 n^{1} \sum_{k=1}^{n} k^{5} - \coeffA{m}{3} n^{0} \sum_{k=1}^{n} k^{6} \\
+        &+ \coeffA{m}{4} n^{4} \sum_{k=1}^{n} k^{4} - \coeffA{m}{4} 4 n^{3} \sum_{k=1}^{n} k^{5} + \coeffA{m}{4} 6 n^{2} \sum_{k=1}^{n} k^{6} - \coeffA{m}{4} 4 n^{1} \sum_{k=1}^{n} k^{7} + \coeffA{m}{4} n^{0} \sum_{k=1}^{n} k^{8} \\
+        &+ \cdots \\
+    \end{split}\label{eq:equation15}
+\end{equation}
+Rearranging sum we get for $m=4$
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n \\
+        &+ \sum_{k=1}^{n} k^{1} \coeffA{m}{1} n^{1} \\
+        &+ \sum_{k=1}^{n} k^{2} \left[ - \coeffA{m}{1} n^{0} + \coeffA{m}{2} n^{2} \right] \\
+        &+ \sum_{k=1}^{n} k^{3} \left[ - \coeffA{m}{2} 2n + \coeffA{m}{3} n^3 \right] \\
+        &+ \sum_{k=1}^{n} k^{4} \left[ \coeffA{m}{2} - \coeffA{m}{3} 3n^2 + \coeffA{m}{4} n^4 \right] \\
+        &+ \sum_{k=1}^{n} k^{5} \left[ \coeffA{m}{3} 3n - \coeffA{m}{4} 4n^3 \right] \\
+        &+ \sum_{k=1}^{n} k^{6} \left[ - \coeffA{m}{3} + \coeffA{m}{4} 6n^2 \right] \\
+        &+ \sum_{k=1}^{n} k^{7} \left[ - \coeffA{m}{4} 4n \right] \\
+        &+ \sum_{k=1}^{n} k^{8} \left[ - \coeffA{m}{4} \right]
+    \end{split}\label{eq:equation16}
+\end{equation}
+Rearranging sum we get for $m=4$
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n \binom{0}{0}\\
+        &+ \sum_{k=1}^{n} k^{1} \coeffA{m}{1} n^{1} \binom{1}{0} \\
+        &+ \sum_{k=1}^{n} k^{2} \left[ - \coeffA{m}{1} n^{0} \binom{1}{1} + \coeffA{m}{2} n^{2} \binom{2}{0} \right] \\
+        &+ \sum_{k=1}^{n} k^{3} \left[ - \coeffA{m}{2} n \binom{2}{1} + \coeffA{m}{3} n^3 \binom{3}{0} \right] \\
+        &+ \sum_{k=1}^{n} k^{4} \left[ \coeffA{m}{2} \binom{2}{2} - \coeffA{m}{3} n^2 \binom{3}{1} + \coeffA{m}{4} n^4 \binom{4}{0} \right] \\
+        &+ \sum_{k=1}^{n} k^{5} \left[ \coeffA{m}{3} n \binom{3}{2} - \coeffA{m}{4} n^3 \binom{4}{1} \right] \\
+        &+ \sum_{k=1}^{n} k^{6} \left[ - \coeffA{m}{3} \binom{3}{3} + \coeffA{m}{4} n^2 \binom{4}{2} \right] \\
+        &+ \sum_{k=1}^{n} k^{7} \left[ - \coeffA{m}{4} n \binom{4}{3} \right] \\
+        &+ \sum_{k=1}^{n} k^{8} \left[ - \coeffA{m}{4} \binom{4}{4} \right]
+    \end{split}\label{eq:equation18}
+\end{equation}

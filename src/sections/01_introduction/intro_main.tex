@@ -11,6 +11,7 @@
 \usepackage[pdfpagelabels,hyperindex,colorlinks=true,linkcolor=blue,urlcolor=magenta,citecolor=green]{hyperref}
 \usepackage{graphicx}
 \linespread{1.7}
+\usepackage{array}
 \emergencystretch=1em
 
 \newcommand \anglePower [2]{\langle #1 \rangle \sp{#2}}
@@ -40,6 +41,7 @@
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{examp}[thm]{Example}
+\newtheorem{conj}[thm]{Conjecture}
 
 \numberwithin{equation}{section}
 
@@ -83,8 +85,8 @@
     \tableofcontents
 
 
-%    \section{Introduction and Main Results} \label{sec:introduction}
-%    \input{sections/introduction}
+    \section{Introduction} \label{sec:introduction}
+    \input{introduction}
 %
 %
 %    \section{Coefficients derivation}\label{sec:coefficients-derivation}
