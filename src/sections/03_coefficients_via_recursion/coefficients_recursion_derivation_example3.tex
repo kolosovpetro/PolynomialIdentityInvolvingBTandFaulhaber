@@ -1,0 +1,35 @@
+\begin{examp}
+    Example for $\coeffA{m}{r}$ for $m=3$.
+    First we get $\coeffA{3}{3}$
+    \begin{equation*}
+        \coeffA{m}{m} = 7 \binom{6}{3}= 140
+    \end{equation*}
+    Then $\coeffA{3}{2} = 0$ because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in
+    $2 \leq d < 3$.
+    The $\coeffA{3}{1}$ coefficient is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{3}{1}
+            &= 3 \binom{2}{1} \sum_{d \geq 3} \coeffA{3}{d} \binom{d}{3} \frac{(-1)^{d-1}}{d-1} \bernoulli{2d-2} \\
+            &= 3 \binom{2}{1} \coeffA{3}{3} \binom{3}{3} \frac{(-1)^2}{2} \bernoulli{4}
+            = 3 \cdot 140 \cdot (-\frac{1}{30}) = -14
+        \end{split}
+    \end{equation*}
+    Finally $\coeffA{3}{0}$ coefficient is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{3}{0}
+            &= 1 \binom{0}{0} \sum_{d \geq 1} \coeffA{3}{d} \binom{d}{1} \frac{(-1)^{d-1}}{d} \bernoulli{2d}
+            = \sum_{d \geq 1} \coeffA{3}{d} \binom{d}{1} \frac{(-1)^{d-1}}{d} \bernoulli{2d} \\
+            & = \coeffA{3}{1} \binom{1}{1} \frac{(-1)^{1-1}}{1} \bernoulli{2}
+            + \coeffA{3}{2} \binom{2}{1} \frac{(-1)^{2-1}}{2} \bernoulli{4}
+            + \coeffA{3}{3} \binom{3}{1} \frac{(-1)^{3-1}}{3} \bernoulli{6} \\
+            & = \coeffA{3}{1} \bernoulli{2} - 2 \coeffA{3}{2} \frac{1}{2} \bernoulli{4}
+            + 3 \coeffA{3}{3} \frac{1}{3} \bernoulli{6} \\
+            &= \frac{1}{6} \coeffA{3}{1}
+            + \coeffA{3}{2} \frac{1}{30}
+            + \coeffA{3}{3} \frac{1}{42} \\
+            & = \frac{-14}{6} + \frac{140}{42} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
