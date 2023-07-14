@@ -1,0 +1,34 @@
+\begin{examp}
+    Let be $m=5$ so that first we get $\coeffA{5}{5}$
+    \begin{equation*}
+        \coeffA{5}{5} = 11 \binom{10}{5}= 2772
+    \end{equation*}
+    Then $\coeffA{5}{4} = 0$ and $\coeffA{5}{3} = 0$
+    because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in
+    $3 \leq d < 5$.
+    The value of $\coeffA{5}{2}$ coefficient is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{2}
+            = \sum_{d \geq 5}^{5} \coeffA{5}{d} \cdot T(d,2) = \coeffA{5}{5} \cdot T(5,2) = 2772 \cdot \frac{5}{21} = 660
+        \end{split}
+    \end{equation*}
+    The value of $\coeffA{5}{1}$ coefficient is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{1}
+            &= \sum_{d \geq 3}^{5} \coeffA{5}{d} \cdot T(d,1)
+            = \coeffA{5}{3} \cdot T(3,1) + \coeffA{5}{4} \cdot T(4,1) + \coeffA{5}{5} \cdot T(5,1) \\
+            &= 2772 \cdot \left( - \frac{1}{2} \right) = -1386
+        \end{split}
+    \end{equation*}
+    Finally the $\coeffA{5}{0}$ coefficient is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{0}
+            &= \sum_{d \geq 1}^{5} \coeffA{5}{d} \cdot T(d, 0)
+            = \coeffA{5}{1} \cdot T(1, 0) + \coeffA{5}{2} \cdot T(2, 0) + \coeffA{5}{5} \cdot T(5, 0) \\
+            &= -1386 \cdot \frac{1}{6} + 660 \cdot \frac{1}{30} + 2772 \cdot \frac{5}{66} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
