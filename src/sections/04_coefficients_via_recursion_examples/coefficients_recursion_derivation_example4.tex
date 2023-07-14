@@ -1,38 +1,28 @@
 \begin{examp}
-    Example for $\coeffA{m}{r}$ for $m=4$.
-    First we get $\coeffA{4}{4}$
+    Let be $m=4$ so that first we get $\coeffA{4}{4}$
     \begin{equation*}
         \coeffA{4}{4} = 9 \binom{8}{4}= 630
     \end{equation*}
-    Then $\coeffA{4}{2} = 0, \; \coeffA{4}{3} = 0$
+    Then $\coeffA{4}{3} = 0$ and $\coeffA{4}{2} = 0$
     because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in
     $2 \leq d < 4$.
-    The $\coeffA{4}{1}$ coefficient is non-zero and calculated as
+    The value of $\coeffA{4}{1}$ coefficient is non-zero and calculated as
     \begin{equation*}
         \begin{split}
             \coeffA{4}{1}
-            &= 3 \binom{2}{1} \sum_{d \geq 3} \coeffA{4}{d} \binom{d}{3} \frac{(-1)^{d-1}}{d-1} \bernoulli{2d-2} \\
-            &= 3 \binom{2}{1} \coeffA{4}{4} \binom{4}{3} \frac{(-1)^3}{3} \bernoulli{6}
-            = 3 \cdot 2 \cdot 630 \cdot 4 \cdot (-\frac{1}{3}) \cdot \frac{1}{42} = -120
+            = \sum_{d \geq 3}^{4} \coeffA{4}{d} \cdot T(d,1)
+            = \coeffA{4}{3} \cdot T(3,1) + \coeffA{4}{4} \cdot T(4,1)
+            = 630 \cdot \left( -\frac{4}{21} \right)
+            = -120
         \end{split}
     \end{equation*}
     Finally $\coeffA{4}{0}$ coefficient is
     \begin{equation*}
         \begin{split}
             \coeffA{4}{0}
-            &= 1 \binom{0}{0} \sum_{d \geq 1} \coeffA{4}{d} \binom{d}{1} \frac{(-1)^{d-1}}{d} \bernoulli{2d}
-            = \sum_{d \geq 1} \coeffA{4}{d} \binom{d}{1} \frac{(-1)^{d-1}}{d} \bernoulli{2d} \\
-            & = \coeffA{4}{1} \binom{1}{1} \frac{(-1)^{1-1}}{1} \bernoulli{2}
-            + \coeffA{4}{2} \binom{2}{1} \frac{(-1)^{2-1}}{2} \bernoulli{4}
-            + \coeffA{4}{3} \binom{3}{1} \frac{(-1)^{3-1}}{3} \bernoulli{6}
-            + \coeffA{4}{4} \binom{4}{1} \frac{(-1)^{4-1}}{4} \bernoulli{8} \\
-%            & = \coeffA{3}{1} \bernoulli{2} - 2 \coeffA{3}{2} \frac{1}{2} \bernoulli{4}
-%            + 3 \coeffA{3}{3} \frac{1}{3} \bernoulli{6} \\
-            &= \coeffA{4}{1} \frac{1}{6}
-            + \coeffA{4}{2} \frac{1}{30}
-            + \coeffA{4}{3} \frac{1}{42}
-            + \coeffA{4}{4} \frac{1}{30} \\
-            & = \frac{-120}{6} + \frac{630}{30} = 1
+            = \sum_{d \geq 1}^{4} \coeffA{4}{d} \cdot T(d, 0)
+            = \coeffA{4}{1} \cdot T(1, 0) + \coeffA{4}{4} \cdot T(4, 0)
+            = -120 \cdot \frac{1}{6} + 630 \cdot \frac{1}{30} = 1
         \end{split}
     \end{equation*}
 \end{examp}

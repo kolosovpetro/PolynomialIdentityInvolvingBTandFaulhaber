@@ -1,0 +1,19 @@
+Consider the coefficients $\coeffA{m}{r}$ definition (eqref), it can be written as
+\begin{equation*}
+    \coeffA{m}{r} \colonequals
+    \begin{cases}
+    (2r+1)
+        \binom{2r}{r}, & \text{if } r=m; \\
+        \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \underbrace{(2r+1) \binom{2r}{r} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r} \bernoulli{2d-2r}}_{T(d,r)}, & \text{if } 0 \leq r<m; \\
+        0, & \text{if } r<0 \text{ or } r>m,
+    \end{cases}
+\end{equation*}
+Therefore, let be a definition for the polynomial $T(d,r)$
+\begin{defn}
+    \begin{equation*}
+        T(d,r) = (2r+1) \binom{2r}{r} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r} \bernoulli{2d-2r}
+    \end{equation*}
+\end{defn}
+\input{coefficients_recursion_derivation_example2}
+\input{coefficients_recursion_derivation_example3}
+\input{coefficients_recursion_derivation_example4}

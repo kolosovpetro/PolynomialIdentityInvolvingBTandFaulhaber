@@ -27,7 +27,7 @@ faulhaberFormula::usage= "Power sum from 1 to N."
 
 binomialPowerSum::usage= "Binomial power sum \\sum_{t=0}^{r} (-1)^t \\binom{r}{t} n^{r-t} \\sum_{k=1}^{n} k^{t+r}"
 
-auxiliaryCoefficient::usage = "Coefficient \\binom{d}{2r+1} \\frac{(-1)^{d-1}}{d-r}"
+T::usage = "Coefficient \\binom{d}{2r+1} \\frac{(-1)^{d-1}}{d-r}"
 
 Begin["`Private`"]
 
@@ -60,11 +60,14 @@ faulhaberFormula[p_, n_] := 1 / (p+1) * Sum[Binomial[p+1, k] * BernoulliB[k] * n
 
 binomialPowerSum[r_, n_] := Sum[(-1)^t * Binomial[r, t] * n^(r-t) * faulhaberFormula[t+r, n], {t, 0, r}];
 
-auxiliaryCoefficient[r_, d_]:= (2r+1) * Binomial[2r, r] * Binomial[d, 2r+1] * (-1)^(d-1) / (d-r) * BernoulliB[2d - 2r];
+T[d_, r_]:= (2r+1) * Binomial[2r, r] * Binomial[d, 2r+1] * (-1)^(d-1) / (d-r) * BernoulliB[2d - 2r];
 
 End[ ]
 
 EndPackage[ ]
+
+
+
 
 
 

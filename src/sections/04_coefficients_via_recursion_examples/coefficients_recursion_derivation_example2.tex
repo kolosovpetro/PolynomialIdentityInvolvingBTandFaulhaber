@@ -1,14 +1,17 @@
 \begin{examp}
-    Example for $\coeffA{m}{r}$ for $m=2$.
-    First we get $\coeffA{2}{2}$
+    Let be $m=2$ so first we get $\coeffA{2}{2}$
     \begin{equation*}
-        \coeffA{m}{m} = 5\binom{4}{2}=30
+        \coeffA{2}{2} = 5\binom{4}{2}=30
     \end{equation*}
     Then $\coeffA{2}{1} = 0$ because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in
     $1 \leq d < 2$.
     Finally, the $\coeffA{2}{0}$ is
     \begin{equation*}
-        \coeffA{2}{0} = 1 \binom{0}{0} \sum_{d \geq 1} \coeffA{2}{d} \binom{d}{1} \frac{(-1)^{d-1}}{d} \bernoulli{2d}
-        = \coeffA{2}{2} 2 \frac{-1}{2} \bernoulli{4} = 1.
+        \begin{split}
+            \coeffA{2}{0}
+            = \sum_{d \geq 1}^{2} \coeffA{2}{d} \cdot T(d, 0)
+            &= \coeffA{2}{1} \cdot T(1, 0) + \coeffA{2}{2} \cdot T(2, 0) \\
+            &= 30 \cdot \frac{1}{30} = 1
+        \end{split}
     \end{equation*}
 \end{examp}
