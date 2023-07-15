@@ -1,8 +1,8 @@
 One approach to prove the conjecture was proposed by Albert Tkaczyk in his series of preprints (two references).
-The essence of the approach lays in construction and solving of the particular system of linear equations.
-Such system linear equations is constructed using Binomial theorem and Faulhaber's formula
-that allows us to find closed froms of power sums as part of identity (reference to equation).
-Consider the polynomial relation
+The main idea is to construct and solve a system of linear equations.
+Such a system of linear equations is constructed via expanding the definition of the coefficients $\coeffA{m}{r}$
+(reference) applying Binomial theorem and Faulhaber's formula.
+Consider the definition of the coefficients $\coeffA{m}{r}$
 \begin{equation}
     n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
 \end{equation}
@@ -14,7 +14,7 @@ Expanding the $(n-k)^r$ part via Binomial theorem we get
         &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
     \end{split}\label{eq:equation2}
 \end{equation}
-For arbitrary $m$ we have
+Applying the Faulhaber's formula to $\sum_{k=1}^{n} k^{t+r}$ we get
 \begin{equation}
     \begin{split}
         n^{2m+1}
@@ -30,3 +30,5 @@ For arbitrary $m$ we have
         &+ \coeffA{m}{8} \left[ \frac{1}{218790} (-1551693 n + 2042040 n^3 - 516868 n^5 + 26520 n^7 + n^{17}) \right] + \cdots
     \end{split}\label{eq:equation17}
 \end{equation}
+Given fixed $m$, the coefficients $\coeffA{m}{r}$ can be determined via a system of linear equations.
+Consider an example
