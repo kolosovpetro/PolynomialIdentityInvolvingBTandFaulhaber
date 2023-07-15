@@ -33,8 +33,9 @@ Now, we notice that
          \frac{(-1)^r}{j} \binom{r}{2r-j+1}, & \text{if } j>0.
     \end{cases}\label{eq:combinatorial-identity}
 \end{equation}
-In particular, the last sum is zero for $0< t \leq j$.
-So taking $j=0$ we have
+An elegant proof of the above binomial identity is provided at~\cite{scheuer2023mathstackexchange}.
+In particular, the equation~\eqref{eq:combinatorial-identity} is zero for $0< t \leq j$.
+So that taking $j=0$ we have
 \begin{equation}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -86,7 +87,7 @@ Taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7}, we get
 \begin{equation}
     \coeffA{m}{m} = (2m+1)\binom{2m}{m}\label{eq:equation8}
 \end{equation}
-and taking the coefficient of $x^{2d+1}$ for an integer $d$ in the range $m/2 \leq d < m$, we get
+and taking the coefficient of $n^{2d+1}$ for an integer $d$ in the range $m/2 \leq d < m$, we get
 \begin{equation}
     \coeffA{m}{d} = 0\label{eq:equation9}
 \end{equation}
@@ -118,5 +119,5 @@ Finally, the coefficient $\coeffA{m}{r}$ is defined recursively as
         0, & \text{if } r<0 \text{ or } r>m,
     \end{cases}
 \end{equation}
-where $\bernoulli{t}$ are Bernoulli numbers.
+where $\bernoulli{t}$ are Bernoulli numbers~\cite{bateman1953higher}.
 It is assumed that $\bernoulli{1}=\frac{1}{2}$.
