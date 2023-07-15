@@ -1,31 +1,32 @@
-For $m=1$ we have an identity
-
+\begin{examp}
+    Let be fixed $m=1$ so that we have the following relation defined by (eqref)
+    \begin{equation*}
+        \coeffA{m}{0} n + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right] -n^3 = 0
+    \end{equation*}
+\end{examp}
+Multiplying by $6$ both, right hand side and left hand side, we get
 \begin{equation*}
-    \coeffA{m}{0} n + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right] - n^3 = 0
+    6\coeffA{1}{0} n + \coeffA{1}{1} (-n + n^3) - 6n^3 = 0
 \end{equation*}
-Multiplying by 6 both parts we get
+Opening brackets and rearranging the terms gives
 \begin{equation*}
-    6 \coeffA{m}{0} n + \coeffA{m}{1} (-n + n^3)  - 6 n^3 = 0
+    6 \coeffA{1}{0} - \coeffA{1}{1} n + \coeffA{1}{1} n^3 - 6n^3 = 0
 \end{equation*}
-
-Opening brackets gives
+Combining the terms yields
 \begin{equation*}
-    6 \coeffA{m}{0} n - \coeffA{m}{1} n + \coeffA{m}{1} n^3  - 6 n^3 = 0
+    n(6\coeffA{1}{0} - \coeffA{1}{1}) + n^3 (\coeffA{1}{1} - 6) = 0
 \end{equation*}
-
-Arranging terms we get
-
-\begin{equation*}
-    n (6\coeffA{m}{0} - \coeffA{m}{1})+ n^3 (\coeffA{m}{1} - 6)  = 0, \quad n \geq 1
-\end{equation*}
-
-Hence
-
+Therefore, the system of linear equations follows
 \begin{equation*}
     \begin{cases}
-        6\coeffA{m}{0} - \coeffA{m}{1} = 0 \\
-        \coeffA{m}{1} - 6 = 0
+        6 \coeffA{1}{0} - \coeffA{1}{1} = 0 \\
+        \coeffA{1}{1} - 6 = 0
     \end{cases}
 \end{equation*}
-
-So that $\coeffA{m}{1}=6 \quad \coeffA{m}{1} = 1$
+Solving it we get
+\begin{equation*}
+    \begin{cases}
+        \coeffA{1}{1} = 6 \\
+        \coeffA{1}{0} = 1
+    \end{cases}
+\end{equation*}

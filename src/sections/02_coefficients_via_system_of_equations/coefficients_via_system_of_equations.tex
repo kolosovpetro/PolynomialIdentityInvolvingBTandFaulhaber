@@ -1,5 +1,33 @@
-One approach to prove the conjecture was proposed by Albert Tkaczyk in his series of articles (two references).
+One approach to prove the conjecture was proposed by Albert Tkaczyk in his series of preprints (two references).
 The essence of the approach lays in construction and solving of the particular system of linear equations.
 Such system linear equations is constructed using Binomial theorem and Faulhaber's formula
 that allows us to find closed froms of power sums as part of identity (reference to equation).
-Consider the case of equation (equation reference) for $m=1$
+Consider the polynomial relation
+\begin{equation}
+    n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
+\end{equation}
+Expanding the $(n-k)^r$ part via Binomial theorem we get
+\begin{equation}
+    \begin{split}
+        n^{2m+1} &= \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r} \\
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} k^{t} \right] \\
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+    \end{split}\label{eq:equation2}
+\end{equation}
+For arbitrary $m$ we have
+\begin{equation}
+    \begin{split}
+        n^{2m+1}
+        &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
+        &= \coeffA{m}{0} n
+        + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
+        + \coeffA{m}{2} \left[ \frac{1}{30} (-n + n^5) \right]
+        + \coeffA{m}{3} \left[ \frac{1}{420} (-10 n + 7 n^3 + 3 n^7) \right] \\
+        &+ \coeffA{m}{4} \left[ \frac{1}{630} (-21 n + 20 n^3 + n^9) \right]
+        + \coeffA{m}{5} \left[ \frac{1}{2772} (-210 n + 231 n^3 - 22 n^5 + n^{11}) \right] \\
+        &+ \coeffA{m}{6} \left[ \frac{1}{60060} (-15202 n + 18200 n^3 - 3003 n^5 + 5 n^{13}) \right] \\
+        &+ \coeffA{m}{7} \left[ \frac{1}{51480} (-60060 n + 76010 n^3 - 16380 n^5 + 429 n^7 + n^{15}) \right] \\
+        &+ \coeffA{m}{8} \left[ \frac{1}{218790} (-1551693 n + 2042040 n^3 - 516868 n^5 + 26520 n^7 + n^{17}) \right] + \cdots
+    \end{split}\label{eq:equation17}
+\end{equation}
+\input{coefficients_via_system_of_equations_example1}
