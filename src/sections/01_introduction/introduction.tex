@@ -1,7 +1,24 @@
 Back then in 2016 I was playing with numbers and have noticed the pattern in terms of finite differences
 of cubes $n^3$.
 Considering the table of forward finite differences of the polynomial $n^3$
-\input{differences_of_cubes}
+\begin{table}[H]
+    \begin{center}
+        \setlength\extrarowheight{-6pt}
+        \begin{tabular}{c|cccc}
+            $n$ & $n^3$ & $\Delta(n^3)$ & $\Delta^2(n^3)$ & $\Delta^3(n^3)$ \\
+            \hline
+            0   & 0     & 1             & 6               & 6               \\
+            1   & 1     & 7             & 12              & 6               \\
+            2   & 8     & 19            & 18              & 6               \\
+            3   & 27    & 37            & 24              & 6               \\
+            4   & 64    & 61            & 30              & 6               \\
+            5   & 125   & 91            & 36              &                 \\
+            6   & 216   & 127           &                 &                 \\
+            7   & 343   &               &                 &
+        \end{tabular}
+    \end{center}
+    \caption{Table of finite differences of the polynomial $n^3$.} \label{tab:table}
+\end{table}
 We can observe easily that finite differences of the polynomial $n^3$ may be expressed according
 to the following relation, via rearrangement of the terms
 \begin{align*}
@@ -26,8 +43,6 @@ Therefore, we can consider $n^3$ as
     \label{eq:cube_identity}
     n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
 \end{equation}
-%It is clearly seen that above identity holds via the table of values
-%\input{table_values_for_cubes}
 Assume that equation~\eqref{eq:cube_identity} has an implicit form as follows
 \begin{equation}
     \label{eq:pattern}
