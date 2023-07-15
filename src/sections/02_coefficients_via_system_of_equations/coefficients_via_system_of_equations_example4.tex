@@ -1,0 +1,57 @@
+\begin{examp}
+    Let be fixed $m=4$ so that we have the following relation defined by (eqref)
+    \begin{equation*}
+        \begin{split}
+            \coeffA{m}{0} n
+            &+ \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
+            + \coeffA{m}{2} \left[ \frac{1}{30} (-n + n^5) \right]
+            + \coeffA{m}{3} \left[ \frac{1}{420} (-10 n + 7 n^3 + 3 n^7) \right] \\
+            &+ \coeffA{m}{4} \left[ \frac{1}{630} (-21 n + 20 n^3 + n^9) \right] - n^9 = 0
+        \end{split}
+    \end{equation*}
+    Multiplying by $630$ both, right hand side and left hand side, we get
+    \begin{equation*}
+        \begin{split}
+            630 \coeffA{4}{0} n
+            &+ 105 \coeffA{4}{1} (-n + n^3) + 21 \coeffA{4}{2} (-n + n^5) \\
+            &+ \frac{3}{2} \coeffA{4}{3} (-10 n + 7 n^3 + 3 n^7) + \coeffA{4}{4} (-21 n + 20 n^3 + n^9) - 630 n^9 = 0
+        \end{split}
+    \end{equation*}
+    Opening brackets and rearranging the terms gives
+    \begin{equation*}
+        \begin{split}
+            630 \coeffA{4}{0} n
+            &- 105 \coeffA{4}{1} n + 105 \coeffA{4}{1} n ^3 - 21 \coeffA{4}{2} n + 21 \coeffA{4}{2} n^5 \\
+            &- \frac{3}{2} \coeffA{4}{3} \cdot 10n + \frac{3}{2} \coeffA{4}{3} \cdot 7n^3 + \frac{3}{2} \coeffA{4}{3} \cdot 3n^7 \\
+            &-21 \coeffA{4}{4} n + 20 \coeffA{4}{4} n^3 + \coeffA{4}{4} n ^9 - 630 n^9 = 0
+        \end{split}
+    \end{equation*}
+    Combining the terms yields
+    \begin{equation*}
+        \begin{split}
+            n (420 \coeffA{3}{0} - 70 \coeffA{3}{1} - 14 \coeffA{3}{2} - 10 \coeffA{3}{3})
+            + n^3 (70 \coeffA{3}{1} + 7 \coeffA{3}{3})
+            + n^5 14 \coeffA{3}{2}
+            + n^7 (3 \coeffA{3}{3} - 420)
+            = 0
+        \end{split}
+    \end{equation*}
+    Therefore, the system of linear equations follows
+    \begin{equation*}
+        \begin{cases}
+            420 \coeffA{3}{0} - 70 \coeffA{3}{1} - 14 \coeffA{3}{2} - 10 \coeffA{3}{3} = 0 \\
+            70 \coeffA{3}{1} + 7 \coeffA{3}{3} = 0 \\
+            \coeffA{3}{2} - 30 = 0 \\
+            3 \coeffA{3}{3} - 420 = 0
+        \end{cases}
+    \end{equation*}
+    Solving it we get
+    \begin{equation*}
+        \begin{cases}
+            \coeffA{3}{3} = 140 \\
+            \coeffA{3}{2} = 0 \\
+            \coeffA{3}{1} = -\frac{7}{70} \coeffA{3}{3} = -14 \\
+            \coeffA{3}{0} = \frac{(70 \coeffA{3}{1} + 10 \coeffA{3}{3})}{420} = 1
+        \end{cases}
+    \end{equation*}
+\end{examp}
