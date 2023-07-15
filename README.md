@@ -1,8 +1,9 @@
 # Polynomial identity involving Binomial Theorem and Faulhaber's formula
 
-Given the polynomial identity
-```math
-n^{2m+1} = \sum_{r=0}^{m} \mathbf{A}_{m,r} \sum_{k=1}^{n} k^{r} (n-k)^{r}
-```
-we derive and prove the coefficients $\mathbf{A}_{m,r}$ using Binomial theorem and Faulhaber's formula
-so that odd-power identity holds.
+In this manuscript we show that for every $n\geq 1, \; n,m\in\mathbb{N}$
+there are coefficients $\mathbf{A}_{m,0}, \mathbf{A}_{m,1}, \ldots, \mathbf{A}_{m,m}$ such that
+the polynomial identity holds
+
+$$n^{2m+1} = \sum_{k=1}^{n} \mathbf{A}_{m,0} k^0 (n-k)^0 + \mathbf{A}_{m,1}(n-k)^1
++ \cdots + \mathbf{A}_{m,m} k^m (n-k)^m$$
+
