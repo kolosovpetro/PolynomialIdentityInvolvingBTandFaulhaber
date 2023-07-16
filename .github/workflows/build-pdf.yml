@@ -47,8 +47,12 @@ jobs:
           root_file: "${{ env.FILE_NAME }}.tex"
           working_directory: src
 
+      - name: List src
+        run: |
+          ls -lsa src
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: "drop"
+          name: "${{ env.FILE_NAME }}-${{ env.GitVersion_InformationalVersion }}"
           path: "src/${{ env.FILE_NAME }}.pdf"
