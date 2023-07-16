@@ -18,7 +18,7 @@ Expanding the $(n-k)^r$ part via Binomial theorem we get
     \end{split}
 \end{equation*}
 Applying the Faulhaber's formula to the sum $\sum_{k=1}^{n} k^{t+r}$ we get
-\begin{equation*}
+\begin{equation}
     \begin{split}
         n^{2m+1}
         &= \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \right] \\
@@ -28,7 +28,7 @@ Applying the Faulhaber's formula to the sum $\sum_{k=1}^{n} k^{t+r}$ we get
         &+ \coeffA{m}{6} \left[ \frac{1}{60060} (-15202 n + 18200 n^3 - 3003 n^5 + 5 n^{13}) \right] \\
         &+ \coeffA{m}{7} \left[ \frac{1}{51480} (-60060 n + 76010 n^3 - 16380 n^5 + 429 n^7 + n^{15}) \right] \\
         &+ \coeffA{m}{8} \left[ \frac{1}{218790} (-1551693 n + 2042040 n^3 - 516868 n^5 + 26520 n^7 + n^{17}) \right] + \cdots
-    \end{split}
-\end{equation*}
+    \end{split}\label{eq:arbitrary-relation}
+\end{equation}
 Given fixed $m$, the coefficients $\coeffA{m}{r}$ can be determined via a system of linear equations.
 Consider an example
