@@ -45,7 +45,7 @@ jobs:
         shell: bash
         run: |
           newVersion=${{ env.GitVersion_InformationalVersion }}
-          sed -i "s|Local-0.1.0|$newVersion|" "src/version.tex"
+          sed -i "s|Local-0.1.0|$newVersion|" "src/sections/version.tex"
 
       - name: Build PDF
         uses: xu-cheng/latex-action@v2
