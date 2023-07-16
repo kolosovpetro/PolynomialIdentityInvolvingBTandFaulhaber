@@ -55,4 +55,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: "${{ env.FILE_NAME }}-${{ env.GitVersion_InformationalVersion }}"
-          path: "src/${{ env.FILE_NAME }}.pdf"
+          path: | 
+            src/${{ env.FILE_NAME }}.pdf
+            src/${{ env.FILE_NAME }}.bbl
+            src/${{ env.FILE_NAME }}.bib
+            src/sections
