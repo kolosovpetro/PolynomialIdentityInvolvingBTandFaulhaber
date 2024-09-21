@@ -19,3 +19,4 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Grammar fix introduction
 - Grammar fix section 2
 - Grammar fix section 3
+- Grammar fix conclusions
