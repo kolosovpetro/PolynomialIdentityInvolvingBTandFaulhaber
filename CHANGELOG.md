@@ -11,3 +11,5 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Update citation
 - Update README.md
 - Add footnote with GitHub repository link
+- Update abstract
+- Update conclusions
