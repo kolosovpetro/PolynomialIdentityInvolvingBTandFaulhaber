@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: PolynomialIdentityInvolvingBTandFaulhaber.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 42 items.
+Database file #1: PolynomialIdentityInvolvingBTandFaulhaber.bib
+You've used 14 entries,
+            1791 wiz_defined-function locations,
+            520 strings with 6325 characters,
+and the built_in function-call counts, 2062 in all, are:
+= -- 178
+> -- 63
+< -- 1
++ -- 30
+- -- 16
+* -- 58
+:= -- 326
+add.period$ -- 41
+call.type$ -- 14
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 83
+empty$ -- 266
+format.name$ -- 16
+if$ -- 478
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 4
+newline$ -- 72
+num.names$ -- 14
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 50
+swap$ -- 15
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 18
+width$ -- 16
+write$ -- 143
