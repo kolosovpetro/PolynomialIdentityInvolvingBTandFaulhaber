@@ -17,7 +17,7 @@ Considering the table of forward finite differences of the polynomial $n^3$
     \end{center}
     \caption{Table of finite differences of the polynomial $n^3$.} \label{tab:table}
 \end{table}
-We can observe easily that finite differences
+We can easily observe that finite differences
 \footnote{\input{sections/01_introduction/footnote}}
 of the polynomial $n^3$ may be expressed according
 to the following relation, via rearrangement of the terms
@@ -32,7 +32,7 @@ to the following relation, via rearrangement of the terms
         \Delta(n^3) &= 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n
     \end{split}
 \end{align}
-Furthermore, the polynomial $n^3$ is identical to
+Furthermore, the polynomial $n^3$ is equivalent to
 \begin{align*}
     n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \\
     &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
@@ -46,15 +46,15 @@ Therefore, we can consider the polynomial $n^3$ as
     \label{eq:cube_identity}
     n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
 \end{equation}
-Assume that equation~\eqref{eq:cube_identity} has an implicit form as follows
+Assume that equation~\eqref{eq:cube_identity} has the following implicit form
 \begin{equation}
     \label{eq:pattern}
     n^3 = \sum_{k=1}^{n} \coeffA{1}{1} k^1(n-k)^1 + \coeffA{1}{0} k^0(n-k)^0,
 \end{equation}
 where $\coeffA{1}{1} = 6$ and $\coeffA{1}{0} = 1$, respectively.
 Note that here the power of $3$ is actually defined by $2m+1$ where $m=1$.
-So is there a generalization of the relation~\eqref{eq:pattern} for all positive odd powers $2m+1, \; m=0,1,2,\dots$?
-Therefore, let be a conjecture
+So, is there a generalization of the relation~\eqref{eq:pattern} for all positive odd powers $2m+1, \; m=0,1,2,\dots$?
+Therefore, let us propose a conjecture
 \begin{conj}
     For every $n\geq 1, \; n,m\in\mathbb{N}$ there are coefficients $\coeffA{m}{0}, \coeffA{m}{1}, \ldots, \coeffA{m}{m}$ such that
     \begin{equation}
