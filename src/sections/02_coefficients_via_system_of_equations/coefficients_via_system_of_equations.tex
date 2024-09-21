@@ -1,15 +1,15 @@
-One approach to prove the conjecture was proposed by Albert Tkaczyk
+One approach to proving the conjecture was proposed by Albert Tkaczyk
 in his series of the preprints~\cite{tkaczyk2018problem, tkaczyk2018continuation}
 and extended further at~\cite{kolosov2022106}.
 The main idea is to construct and solve a system of linear equations.
 Such a system of linear equations is constructed
-via expanding the definition of the coefficients $\coeffA{m}{r}$
+by expanding the definition of the coefficients $\coeffA{m}{r}$
 applying Binomial theorem~\cite{abramowitz1988handbook} and Faulhaber's formula~\cite{beardon1996sums}.
 Consider the definition of the coefficients $\coeffA{m}{r}$
 \begin{equation}
     n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
 \end{equation}
-Expanding the $(n-k)^r$ part via Binomial theorem we get
+Expanding the $(n-k)^r$ part via Binomial theorem, we get
 \begin{equation*}
     \begin{split}
         n^{2m+1} &= \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r} \\
@@ -30,5 +30,5 @@ Applying the Faulhaber's formula to the sum $\sum_{k=1}^{n} k^{t+r}$ we get
         &+ \coeffA{m}{8} \left[ \frac{1}{218790} (-1551693 n + 2042040 n^3 - 516868 n^5 + 26520 n^7 + n^{17}) \right] + \cdots
     \end{split}\label{eq:arbitrary-relation}
 \end{equation}
-Given fixed $m$, the coefficients $\coeffA{m}{r}$ can be determined via a system of linear equations.
+Given a fixed integer $m$, the coefficients $\coeffA{m}{r}$ can be determined via a system of linear equations.
 Consider an example
