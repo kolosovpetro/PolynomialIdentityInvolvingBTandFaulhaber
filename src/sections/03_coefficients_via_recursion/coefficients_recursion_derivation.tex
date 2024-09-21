@@ -6,8 +6,8 @@ Consider the Faulhaber's formula
 \begin{equation*}
     \sum_{k=1}^{n} k^{p} = \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j}
 \end{equation*}
-it is very important to note that summation bound is $p$ while binomial coefficient upper bound is $p+1$.
-It means that we cannot skip summation bounds unless we do some trick as
+it is very important to note that the summation bound is $p$ while binomial coefficient upper index is $p+1$.
+It means that we cannot skip summation bounds unless we use some trick as
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{p}
@@ -38,7 +38,7 @@ Now, we notice that
          \frac{(-1)^r}{j} \binom{r}{2r-j+1}, & \text{if } j>0.
     \end{cases}\label{eq:combinatorial-identity}
 \end{equation}
-An elegant proof of the above binomial identity is provided at~\cite{scheuer2023mathstackexchange}.
+An elegant proof of the above binomial identity is provided in~\cite{scheuer2023mathstackexchange}.
 In particular, the equation~\eqref{eq:combinatorial-identity} is zero for $0< t \leq j$.
 So that taking $j=0$ we have
 \begin{equation*}
@@ -48,7 +48,7 @@ So that taking $j=0$ we have
         &- \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
     \end{split}
 \end{equation*}
-Now let's simplify the double summation applying the identity~\eqref{eq:combinatorial-identity}
+Now let's simplify the double summation by applying the identity~\eqref{eq:combinatorial-identity}
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -83,10 +83,6 @@ Replacing odd $\ell$ by $d$ we get
         &\sum_{r} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
         + 2 \sum_{r} \coeffA{m}{r} \left[ \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
         - n^{2m+1} = 0
-%        \\
-%        &\sum_{r=0}^{m} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
-%        + 2 \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{d=0}^{(r-1)/2} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
-%        - n^{2m+1} = 0
     \end{split}\label{eq:equation7}
 \end{equation}
 Taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7}, we get
