@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ## Changed
 
 - Rename sections
+- Update readme screenshot
+- Add table row sums give cubes
+- Add table row sums give fifth powers
 
 ## [1.0.0] - 2024-09-21
 
