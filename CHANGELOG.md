@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Add build scripts
 - Add mathematica program
 - Add table for seventh powers
+- Move figures to separate folder
 
 ## [1.0.2] - 2024-09-25
 
