@@ -15,13 +15,14 @@
   \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-f-n-m-albert-tkaczyk/}{\texttt{LinkedIn}},
   2018.
 
-\bibitem{kolosov2022106}
+\bibitem{unusual_identity_for_odd_powers}
 {Kolosov, Petro}.
 \newblock {106.37 An unusual identity for odd-powers}.
 \newblock {\em {The Mathematical Gazette}}, 106(567):509--513, 2022.
+\newblock \url{https://doi.org/10.1017/mag.2022.129}.
 
 \bibitem{abramowitz1988handbook}
-Milton Abramowitz, Irene~A Stegun, and Robert~H Romer.
+{Abramowitz, Milton and Stegun, Irene A. and Romer, Robert H.}
 \newblock Handbook of mathematical functions with formulas, graphs, and
   mathematical tables, 1988.
 
@@ -30,57 +31,56 @@ Alan~F Beardon.
 \newblock {Sums of powers of integers}.
 \newblock {\em {The American mathematical monthly}}, 103(3):201--213, 1996.
 
-\bibitem{kolosov2017third}
+\bibitem{oeis_numerical_triangle_row_sums_give_cubes}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give third power, Entry A287326 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A287326}, 2017.
+  On-Line Encyclopedia of Integer Sequences}, 2017.
+\newblock \url{https://oeis.org/A287326}.
 
-\bibitem{kolosov2018fifth}
+\bibitem{oeis_numerical_triangle_row_sums_give_fifth_powers}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
+  On-Line Encyclopedia of Integer Sequences}, 2018.
+\newblock \url{https://oeis.org/A300656}.
 
-\bibitem{kolosov2018seventh}
+\bibitem{oeis_numerical_triangle_row_sums_give_seventh_powers}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give seventh power, Entry A300785 in
-  The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300785}, 2018.
+  The On-Line Encyclopedia of Integer Sequences}, 2018.
+\newblock \url{https://oeis.org/A300785}.
 
 \bibitem{alekseyev2018mathoverflow}
 {Alekseyev, Max}.
-\newblock {MathOverflow answer 297916/113033}.
-\newblock Published electronically at
-  \url{https://mathoverflow.net/a/297916/113033}, 2018.
+\newblock {MathOverflow answer 297916/113033}, 2018.
+\newblock \url{https://mathoverflow.net/a/297916/113033}.
 
 \bibitem{scheuer2023mathstackexchange}
 {Scheuer, Markus}.
-\newblock {MathStackExchange answer 4724343/463487}.
-\newblock Published electronically at
-  \url{https://math.stackexchange.com/a/4724343/463487}, 2023.
+\newblock {MathStackExchange answer 4724343/463487}, 2023.
+\newblock \url{https://math.stackexchange.com/a/4724343/463487}.
 
 \bibitem{bateman1953higher}
 Harry Bateman.
 \newblock {\em {Higher transcendental functions [volumes i-iii]}}, volume~1.
 \newblock McGRAW-HILL book company, 1953.
 
-\bibitem{kolosov2018numerator}
+\bibitem{oeis_numerators_of_the_coefficient_a_m_r}
 Petro Kolosov.
-\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A302971}, 2018.
+\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A302971}.
 
-\bibitem{kolosov2018denominator}
+\bibitem{oeis_denominators_of_the_coefficient_a_m_r}
 Petro Kolosov.
-\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A304042}, 2018.
+\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A304042}.
 
 \bibitem{kolosov2023github}
 {Kolosov, Petro}.
 \newblock {Polynomial identity involving Binomial Theorem and Faulhaber's
-  formula Source files}.
-\newblock Published electronically at
-  \url{https://github.com/kolosovpetro/PolynomialIdentityInvolvingBTandFaulhaber},
-  2023.
+  formula Source files}, 2023.
+\newblock
+  \url{https://github.com/kolosovpetro/PolynomialIdentityInvolvingBTandFaulhaber}.
 
 \end{thebibliography}
