@@ -7,15 +7,15 @@ Reallocating 'name_of_file' (item size: 1) to 42 items.
 Database file #1: PolynomialIdentityInvolvingBTandFaulhaber.bib
 You've used 14 entries,
             1791 wiz_defined-function locations,
-            522 strings with 6564 characters,
-and the built_in function-call counts, 2061 in all, are:
-= -- 175
-> -- 63
+            522 strings with 6486 characters,
+and the built_in function-call counts, 2024 in all, are:
+= -- 171
+> -- 56
 < -- 1
-+ -- 30
-- -- 16
-* -- 58
-:= -- 323
++ -- 28
+- -- 14
+* -- 53
+:= -- 314
 add.period$ -- 42
 call.type$ -- 14
 change.case$ -- 13
@@ -23,14 +23,14 @@ chr.to.int$ -- 0
 cite$ -- 14
 duplicate$ -- 83
 empty$ -- 266
-format.name$ -- 16
-if$ -- 475
+format.name$ -- 14
+if$ -- 466
 int.to.chr$ -- 0
 int.to.str$ -- 14
 missing$ -- 4
 newline$ -- 73
 num.names$ -- 14
-pop$ -- 79
+pop$ -- 82
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
